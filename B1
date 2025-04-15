@@ -1,0 +1,1249 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PM Digital Ventures | Precision Accounting for Growth-Minded Businesses</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Global Styles */
+        :root {
+            --primary: #002366;
+            --secondary: #FFD700;
+            --accent: #40E0D0;
+            --light: #F5F5F5;
+            --dark: #333333;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Lato', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 4px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .btn-primary {
+            background-color: var(--secondary);
+            color: var(--primary);
+            border: 2px solid var(--secondary);
+        }
+        
+        .btn-primary:hover {
+            background-color: transparent;
+            color: var(--secondary);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--secondary);
+            border: 2px solid var(--secondary);
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--secondary);
+            color: var(--primary);
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--secondary);
+            margin: 20px auto;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        
+        .logo-text {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+        
+        .logo-text span {
+            color: var(--secondary);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--secondary);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary);
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 35, 102, 0.8), rgba(0, 35, 102, 0.8)), url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            margin-top: 80px;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        
+        .trust-badge {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 10px 20px;
+            border-radius: 30px;
+            margin: 0 10px 10px 0;
+            font-size: 0.9rem;
+        }
+        
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-icon {
+            background-color: var(--primary);
+            color: var(--secondary);
+            font-size: 2.5rem;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .service-content {
+            padding: 30px;
+        }
+        
+        .service-content h3 {
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        .learn-more {
+            display: inline-block;
+            margin-top: 20px;
+            color: var(--accent);
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .learn-more:hover {
+            color: var(--primary);
+        }
+        
+        /* Why Choose Us Section */
+        .why-us {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .why-us .section-title {
+            color: white;
+        }
+        
+        .why-us .section-title:after {
+            background: var(--secondary);
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature {
+            text-align: center;
+            padding: 30px;
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+        
+        .feature h3 {
+            margin-bottom: 15px;
+            color: white;
+        }
+        
+        /* Team Section */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .team-member {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+        
+        .member-photo {
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .member-info {
+            padding: 20px;
+        }
+        
+        .member-info h3 {
+            margin-bottom: 5px;
+        }
+        
+        .member-title {
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: 35px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            margin: 0 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--secondary);
+            color: var(--primary);
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            background-color: var(--light);
+        }
+        
+        .testimonial-slider {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .testimonial {
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            display: none;
+        }
+        
+        .testimonial.active {
+            display: block;
+        }
+        
+        .testimonial-text {
+            font-size: 1.1rem;
+            font-style: italic;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .testimonial-text:before,
+        .testimonial-text:after {
+            content: '"';
+            font-size: 3rem;
+            color: var(--secondary);
+            opacity: 0.3;
+            position: absolute;
+        }
+        
+        .testimonial-text:before {
+            top: -20px;
+            left: -10px;
+        }
+        
+        .testimonial-text:after {
+            bottom: -40px;
+            right: -10px;
+        }
+        
+        .client-info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .client-photo {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
+        }
+        
+        .client-name {
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .client-company {
+            color: var(--accent);
+            font-size: 0.9rem;
+        }
+        
+        .slider-nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        
+        .slider-dot {
+            width: 12px;
+            height: 12px;
+            background-color: #ccc;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .slider-dot.active {
+            background-color: var(--primary);
+        }
+        
+        /* Calculator Section */
+        .calculator {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .calculator .section-title {
+            color: white;
+        }
+        
+        .calculator .section-title:after {
+            background: var(--secondary);
+        }
+        
+        .calculator-container {
+            background-color: white;
+            border-radius: 8px;
+            padding: 40px;
+            max-width: 800px;
+            margin: 0 auto;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .calculator-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: 'Lato', sans-serif;
+        }
+        
+        .calculator-result {
+            grid-column: span 2;
+            background-color: var(--light);
+            padding: 20px;
+            border-radius: 4px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .result-score {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin: 10px 0;
+        }
+        
+        .result-text {
+            color: var(--dark);
+        }
+        
+        /* Contact Section */
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .contact-form .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: 'Lato', sans-serif;
+        }
+        
+        .contact-form textarea {
+            height: 150px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .info-icon {
+            font-size: 1.5rem;
+            color: var(--secondary);
+            margin-right: 15px;
+            margin-top: 5px;
+        }
+        
+        .map-container {
+            height: 300px;
+            background-color: #eee;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary);
+            color: white;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-logo {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: white;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        
+        .footer-logo span {
+            color: var(--secondary);
+        }
+        
+        .footer-about p {
+            margin-bottom: 20px;
+        }
+        
+        .footer-links h3,
+        .footer-contact h3 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary);
+        }
+        
+        .footer-contact p {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-contact i {
+            margin-right: 10px;
+            color: var(--secondary);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .social-icons {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            border-radius: 50%;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            background-color: var(--secondary);
+            color: var(--primary);
+        }
+        
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px 0;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .nav-links li {
+                margin: 10px 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .calculator-form {
+                grid-template-columns: 1fr;
+            }
+            
+            .calculator-result {
+                grid-column: span 1;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="https://via.placeholder.com/40x40" alt="PM Digital Ventures Logo">
+                    <div class="logo-text">PM <span>Digital Ventures</span></div>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <a href="#contact" class="btn btn-primary">Schedule Call</a>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Precision Accounting for Growth-Minded Businesses</h1>
+                <p>We provide tailored financial solutions that drive profitability and ensure compliance, so you can focus on what you do best.</p>
+                <a href="#contact" class="btn btn-primary">Get Your Free Consultation</a>
+                <div class="trust-badges">
+                    <div class="trust-badge">Trusted by 500+ businesses</div>
+                    <div class="trust-badge">98% Client Satisfaction</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Our Accounting Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Tax Planning & Strategy</h3>
+                        <p>Proactive tax planning to minimize liabilities and maximize savings throughout the year, not just at filing time.</p>
+                        <a href="#" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Financial Reporting</h3>
+                        <p>Accurate, timely financial statements that give you clear insight into your business performance.</p>
+                        <a href="#" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Business Advisory</h3>
+                        <p>Strategic guidance to help you make informed financial decisions and achieve your business goals.</p>
+                        <a href="#" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-search-dollar"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Audit & Assurance</h3>
+                        <p>Comprehensive audit services to ensure financial integrity and regulatory compliance.</p>
+                        <a href="#" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>CFO Services</h3>
+                        <p>Expert financial leadership on demand, without the full-time executive salary.</p>
+                        <a href="#" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Cloud Accounting</h3>
+                        <p>Modern, secure accounting solutions that give you real-time access to your financial data.</p>
+                        <a href="#" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="about" class="why-us">
+        <div class="container">
+            <h2 class="section-title">Why Choose PM Digital Ventures</h2>
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>10+ Years Combined Experience</h3>
+                    <p>Our team brings decades of expertise across industries, ensuring you get advice that's both deep and broad.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Proactive Approach</h3>
+                    <p>We don't just react to problems - we anticipate challenges and opportunities to keep you ahead.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Technology-Driven Solutions</h3>
+                    <p>We leverage cutting-edge tools to streamline processes and provide real-time financial insights.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team">
+        <div class="container">
+            <h2 class="section-title">Meet Our Accounting Experts</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-photo" style="background-image: url('https://randomuser.me/api/portraits/women/45.jpg');"></div>
+                    <div class="member-info">
+                        <h3>Prince Afotey</h3>
+                        <div class="member-title">CPA, Managing Partner</div>
+                        <p>10+ years in corporate accounting and tax strategy for mid-sized businesses.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo" style="background-image: url('https://randomuser.me/api/portraits/men/32.jpg');"></div>
+                    <div class="member-info">
+                        <h3>Dennis Alemah</h3>
+                        <div class="member-title">Managing Partner & Senior Advisor</div>
+                        <p>Specializes in financial forecasting and business valuation for growth companies.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo" style="background-image: url('https://randomuser.me/api/portraits/women/68.jpg');"></div>
+                    <div class="member-info">
+                        <h3> CA,Samuel Annang</h3>
+                        <div class="member-title">Tax Consultant, Tax Director</div>
+                        <p>Tax compliance expert with deep knowledge of multi-state and international filings.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo" style="background-image: url('https://randomuser.me/api/portraits/men/75.jpg');"></div>
+                    <div class="member-info">
+                        <h3>CA, Percy Boye</h3>
+                        <div class="member-title">,Audit & Compliance Director</div>
+                        <p>Data-driven approach to financial modeling and performance optimization.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Clients Say</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial active">
+                    <div class="testimonial-text">
+                        PM Digital Ventures transformed our financial operations. Their strategic tax planning saved us over Gh¢200k in our first year, and their cloud accounting setup gave us real-time visibility we never had before.
+                    </div>
+                    <div class="client-info">
+                        <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Client" class="client-photo">
+                        <div>
+                            <div class="client-name">Precious Sowah</div>
+                            <div class="client-company">CEO, Prishu Enterprise.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-text">
+                        As a startup founder, I didn't realize how much I didn't know about financial management until working with PM Digital Ventures. They've been invaluable partners in our growth journey.
+                    </div>
+                    <div class="client-info">
+                        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Client" class="client-photo">
+                        <div>
+                            <div class="client-name">Hon. Prosper Appiah</div>
+                            <div class="client-company">Founder, Aegis Group Ltd</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-text">
+                        Their fractional CFO service gives us executive-level financial guidance at a fraction of the cost. The insights we've gained have directly impacted our bottom line.
+                    </div>
+                    <div class="client-info">
+                        <img src="https://randomuser.me/api/portraits/women/62.jpg" alt="Client" class="client-photo">
+                        <div>
+                            <div class="client-name">Amanda Lee</div>
+                            <div class="client-company">COO, UrbanEats Delivery</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-nav">
+                    <div class="slider-dot active" data-slide="0"></div>
+                    <div class="slider-dot" data-slide="1"></div>
+                    <div class="slider-dot" data-slide="2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section class="calculator">
+        <div class="container">
+            <h2 class="section-title">Financial Health Calculator</h2>
+            <div class="calculator-container">
+                <form class="calculator-form">
+                    <div class="form-group">
+                        <label for="revenue">Annual Revenue (¢)</label>
+                        <input type="number" id="revenue" placeholder="e.g. 500000">
+                    </div>
+                    <div class="form-group">
+                        <label for="expenses">Annual Expenses (¢)</label>
+                        <input type="number" id="expenses" placeholder="e.g. 350000">
+                    </div>
+                    <div class="form-group">
+                        <label for="debt">Total Business Debt (¢)</label>
+                        <input type="number" id="debt" placeholder="e.g. 100000">
+                    </div>
+                    <div class="form-group">
+                        <label for="cash">Cash Reserves (¢)</label>
+                        <input type="number" id="cash" placeholder="e.g. 75000">
+                    </div>
+                    <div class="form-group">
+                        <label for="employees">Number of Employees</label>
+                        <input type="number" id="employees" placeholder="e.g. 15">
+                    </div>
+                    <div class="form-group">
+                        <label for="industry">Industry</label>
+                        <select id="industry">
+                            <option value="">Select your industry</option>
+                            <option value="tech">Technology</option>
+                            <option value="retail">Retail</option>
+                            <option value="manufacturing">Manufacturing</option>
+                            <option value="professional">Professional Services</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="calculator-result" id="result" style="display: none;">
+                        <h3>Your Financial Health Score</h3>
+                        <div class="result-score" id="score">78</div>
+                        <p class="result-text" id="result-text">Your business is in good financial health, but there are opportunities to improve cash flow management.</p>
+                        <p>Enter your email to receive a detailed report:</p>
+                        <input type="email" placeholder="Your email address" style="margin: 10px 0; padding: 10px; width: 100%;">
+                        <a href="#" class="btn btn-primary">Get Full Report</a>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="calculate-btn">Calculate Score</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-container">
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="business">Business Type</label>
+                            <select id="business">
+                                <option value="">Select your business type</option>
+                                <option value="sole">Sole Proprietorship</option>
+                                <option value="llc">LLC</option>
+                                <option value="corporation">Corporation</option>
+                                <option value="partnership">Partnership</option>
+                                <option value="nonprofit">Nonprofit</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">How Can We Help?</label>
+                            <textarea id="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <div>
+                        <h3>Our Office</h3>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <p>123 Financial District, Suite 500<br>San Francisco, CA 94111</p>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <p>(+233) 242658403</p>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <p>pmdig@yahoo.com</p>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <p>Monday - Friday: 9am - 5pm<br>Saturday - Sunday: Closed</p>
+                        </div>
+                    </div>
+                    <div class="map-container">
+                        <!-- Map would be embedded here -->
+                        <img src="https://maps.googleapis.com/maps/api/staticmap?center=123+Financial+District,San+Francisco,CA&zoom=14&size=600x300&maptype=roadmap&markers=color:red%7C123+Financial+District,San+Francisco,CA&key=YOUR_API_KEY" alt="Map" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <a href="#" class="footer-logo">PM <span>Digital Ventures</span></a>
+                    <p>Precision accounting solutions for growth-minded businesses. We combine expertise with technology to deliver exceptional financial results.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#team">Our Team</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Tax Planning</a></li>
+                        <li><a href="#">Financial Reporting</a></li>
+                        <li><a href="#">Business Advisory</a></li>
+                        <li><a href="#">Audit Services</a></li>
+                        <li><a href="#">Bookkeeping Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Nii Adjei Leshie St. 0115, Teshie-Accra</p>
+                    <p><i class="fas fa-phone-alt"></i> (+233) 242658403</p>
+                    <p><i class="fas fa-envelope"></i> pmdig@yahoo.com.com</p>
+                    <p><i class="fas fa-clock"></i> Mon-Fri: 9am-5pm</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 PM Digital Ventures. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+                <div style="margin-top: 20px;">
+                    <img src="https://via.placeholder.com/100x40" alt="CPA Logo" style="height: 40px; margin-right: 15px;">
+                    <img src="https://via.placeholder.com/100x40" alt="QuickBooks Certified" style="height: 40px;">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                if(this.getAttribute('href') === '#') return;
+                
+                const target = document.querySelector(this.getAttribute('href'));
+                if(target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if(navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+                }
+            });
+        });
+        
+        // Testimonial Slider
+        const testimonials = document.querySelectorAll('.testimonial');
+        const dots = document.querySelectorAll('.slider-dot');
+        let currentSlide = 0;
+        
+        function showSlide(index) {
+            testimonials.forEach(testimonial => testimonial.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            testimonials[index].classList.add('active');
+            dots[index].classList.add('active');
+            currentSlide = index;
+        }
+        
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => showSlide(index));
+        });
+        
+        // Auto-rotate testimonials
+        setInterval(() => {
+            let nextSlide = (currentSlide + 1) % testimonials.length;
+            showSlide(nextSlide);
+        }, 5000);
+        
+        // Financial Health Calculator
+        const calculateBtn = document.getElementById('calculate-btn');
+        const resultDiv = document.getElementById('result');
+        
+        calculateBtn.addEventListener('click', () => {
+            // Simple calculation for demo purposes
+            const revenue = parseFloat(document.getElementById('revenue').value) || 0;
+            const expenses = parseFloat(document.getElementById('expenses').value) || 0;
+            const debt = parseFloat(document.getElementById('debt').value) || 0;
+            const cash = parseFloat(document.getElementById('cash').value) || 0;
+            
+            // Basic scoring algorithm
+            let score = 70; // Base score
+            
+            // Profitability adjustment
+            const profitMargin = (revenue - expenses) / revenue;
+            if(profitMargin > 0.2) score += 15;
+            else if(profitMargin > 0.1) score += 5;
+            else if(profitMargin <= 0) score -= 10;
+            
+            // Liquidity adjustment
+            const monthsOfRunway = cash / (expenses / 12);
+            if(monthsOfRunway > 6) score += 10;
+            else if(monthsOfRunway < 3) score -= 5;
+            
+            // Leverage adjustment
+            const debtToEquity = debt / (revenue - expenses);
+            if(debtToEquity < 0.5) score += 5;
+            else if(debtToEquity > 1) score -= 10;
+            
+            // Cap score between 0-100
+            score = Math.max(0, Math.min(100, Math.round(score)));
+            
+            // Set score and feedback
+            document.getElementById('score').textContent = score;
+            
+            let feedback = '';
+            if(score >= 80) {
+                feedback = 'Excellent financial health! Your business is well-positioned for growth and stability.';
+            } else if(score >= 60) {
+                feedback = 'Good financial health with some areas for improvement to optimize performance.';
+            } else if(score >= 40) {
+                feedback = 'Fair financial health. We recommend addressing key areas to strengthen your position.';
+            } else {
+                feedback = 'Your financial health needs attention. Contact us for a comprehensive review.';
+            }
+            
+            document.getElementById('result-text').textContent = feedback;
+            resultDiv.style.display = 'block';
+            
+            // Scroll to results
+            resultDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+        
+        // Form submission handling
+        const forms = document.querySelectorAll('form');
+        forms.forEach(form => {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                // In a real implementation, you would send the form data to your server
+                alert('Thank you for your message! We will contact you shortly.');
+                form.reset();
+            });
+        });
+    </script>
+</body>
+</html>
